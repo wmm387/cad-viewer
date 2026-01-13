@@ -95,7 +95,6 @@ import { LocaleProp } from '../locale'
 import { MlDialogManager, MlFileReader } from './common'
 import {
   MlEntityInfo,
-  MlLanguageSelector,
   MlMainMenu,
   MlToolBars
 } from './layout'
@@ -148,7 +147,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { t } = useI18n()
-const { effectiveLocale, elementPlusLocale } = useLocale(props.locale)
+const {  elementPlusLocale } = useLocale(props.locale)
 const { info, warning, error, success } = useNotificationCenter()
 
 // Canvas element reference
@@ -434,7 +433,7 @@ const closeNotificationCenter = () => {
       <!-- Header section with main menu and language selector -->
       <header>
         <ml-main-menu />
-        <ml-language-selector :current-locale="effectiveLocale" />
+        <!-- <ml-language-selector :current-locale="effectiveLocale" /> -->
       </header>
 
       <!-- Main content area with CAD viewing tools and controls -->

@@ -7,6 +7,7 @@ import { store } from '../store'
  */
 export class AcApQuitCmd extends AcEdCommand {
   async execute() {
-    store.selectedFile = null
+    store.selectedFile = undefined
+    store.selectedUrl = undefined
   }
 }

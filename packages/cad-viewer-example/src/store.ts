@@ -1,7 +1,9 @@
 import { reactive } from 'vue'
 
 export const store = reactive<{
-  selectedFile: File | null
+  selectedFile: File | undefined
+  selectedUrl: string | undefined
 }>({
-  selectedFile: null
+  selectedFile: undefined,
+  selectedUrl: undefined
 })
